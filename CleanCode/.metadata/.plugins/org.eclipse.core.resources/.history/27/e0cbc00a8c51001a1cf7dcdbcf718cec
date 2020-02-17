@@ -1,0 +1,15 @@
+package com.epam.CleanCode;
+
+public class Calculation {
+	
+	float simpleInterest(int principle, float rate, int days) {
+		return (principle * rate * days);
+	}
+	
+	float compoundInterest(int principle, float rate, int days) {
+		float ans = principle * (float)Math.pow((1 + (rate / 100)), days);
+		return ans;
+	}
+	
+	
+}

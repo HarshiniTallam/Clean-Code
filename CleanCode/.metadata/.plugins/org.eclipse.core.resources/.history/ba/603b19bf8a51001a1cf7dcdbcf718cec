@@ -1,0 +1,13 @@
+package com.epam.CleanCode;
+
+import java.util.*;
+
+public class InterestCalculation {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner();
+		
+
+	}
+
+}

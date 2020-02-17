@@ -1,0 +1,8 @@
+package com.epam.CleanCode;
+
+public class CostCalculation {
+	
+	float costCalculation(float area, int inr) {
+	    return (area * inr);
+	}
+}

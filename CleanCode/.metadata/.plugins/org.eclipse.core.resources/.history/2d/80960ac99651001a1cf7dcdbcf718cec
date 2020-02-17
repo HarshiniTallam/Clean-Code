@@ -1,0 +1,34 @@
+package com.epam.CleanCode;
+
+import java.util.Scanner;
+
+public class HouseArea {
+
+	public static void main(String[] args) {
+		System.out.println("----COST CALCULATION------");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the area of house in square feets:");
+		float area = sc.nextFloat();
+		System.out.println("To Construct the house choose the materials:");
+		System.out.println("1.Standard Materials(Rs.1200)\n2.Above Standard Materials(Rs.1500)\n3.High standard Materials(Rs.1800)");
+		System.out.println("Enter your option:");
+		int option = sc.nextInt();
+		int inr = 0;
+		if(option == 1) 
+			inr = 1200;
+		else if(option == 2)
+			inr = 1500;
+		else if(option == 3) {
+			inr = 1800;
+			System.out.print("Do you want fully autometed house true/false(+ Rs.700)\n");
+			boolean opt = sc.nextBoolean();
+			if(opt)
+				inr += 700;
+		}
+		else
+			System.out.println("Choose Valid Option");
+		CostCalculation obj = new CostCalculation();
+		System.out.println("Total cost of the house is:"+obj.costOfHouse(area, inr));
+	}
+
+}

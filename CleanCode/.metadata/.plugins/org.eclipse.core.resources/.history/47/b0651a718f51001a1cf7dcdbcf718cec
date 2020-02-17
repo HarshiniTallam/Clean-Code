@@ -1,0 +1,25 @@
+package com.epam.CleanCode;
+
+import java.util.*;
+
+public class InterestCalculation {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter principle Value:");
+		int principle = sc.nextInt();
+		System.out.println("Enter Daily Interest Rate:");
+		float rate = sc.nextFloat();
+		System.out.println("Enter number of days between payments:");
+		int days = sc.nextInt();
+		System.out.println("1.Simple Interest"+"\n"+"2.Compound Interest");
+		System.out.println("Enter the option:");
+		int option = sc.nextInt();
+		Calculation obj = new Calculation();
+		if(option == 1) 
+		    System.out.println(obj.simpleInterest(principle, rate, days));
+		else
+			System.out.println(obj.compoundInterest(principle, rate, days));
+	}
+
+}

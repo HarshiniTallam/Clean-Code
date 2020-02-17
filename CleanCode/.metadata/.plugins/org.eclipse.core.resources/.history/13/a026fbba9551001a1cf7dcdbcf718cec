@@ -1,0 +1,31 @@
+package com.epam.CleanCode;
+
+import java.util.Scanner;
+
+public class HouseArea {
+
+	public static void main(String[] args) {
+		System.out.println("----COST CALCULATION------");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the area of house in square feets:");
+		float area = sc.nextFloat();
+		System.out.println("To Construct the house choose the materials:");
+		System.out.println("1.Standard Materials(Rs.1200)\n2.Above Standard Materials(Rs.1500)\n3.High standard Materials(Rs.1800)\n4.High standard Materials and Fully Automated Home(Rs.2500)");
+		System.out.println("Enter your option:");
+		int option = sc.nextInt();
+		int inr = 0;
+		if(option == 1) 
+			inr = 1200;
+		else if(option == 2)
+			inr = 1500;
+		else if(option == 3)
+			inr = 1800;
+		else if(option == 4)
+			inr = 2500;
+		else
+			System.out.println("Choose Valid Option");
+		CostCalculation obj = new CostCalculation();
+		System.out.println(obj.costOfHouse(area, inr));
+	}
+
+}
